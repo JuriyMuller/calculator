@@ -27,19 +27,13 @@ function results(e) {
         years.value -
       amount.value
     ).toFixed(2);
-    const loader = document.querySelector("#loader");
-
-    loader.style.display = "inline-block";
+    const loader = (document.querySelector("#loader").style.display =
+      "inline-block");
     setTimeout(() => {
       loader.style.display = "none";
       output.style.display = "block";
     }, 2000);
   } else {
-    const loader = (document.querySelector("#loader").style.display =
-      "inline-block");
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 2000);
     output.style.display = "none";
     const error = document.createElement("div");
     error.style.display = "block";
